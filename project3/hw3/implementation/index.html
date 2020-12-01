@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CS171 / HW3</title>
+		<!-- Load CSS libraries -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<!-- own CSS -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+	<!-- ********************** ADD YOUR HTML-ELEMENTS HERE *********************** -->	
+	<!-- Make sure to use proper bootstrap! -->
+	<!-- You will need a div-container with the id: 'chart-area' -->
+
+		<div class="container-fluid">
+			<!-- header -->
+			<br>
+			<div class="row justify-content-center new-font">
+				<div class="align-self-center text">
+					<h1><b>Pizza World: Insights & Statistics</b></h1>
+					<img src="img/PizzaWorld-Logo.png" height="169" width="250" class="center"/>
+				</div>
+			</div>
+			<br>
+			<!-- drop down menu -->
+			<div class="row justify-content-center new-font text">
+				<div class="align-self-center">
+					<p><b>Choose An Area/Order Category:</b></p>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="align-self-center">
+					<div class="user-control">
+						<div class="form-group">
+							<select id="area-category" class="form-control" onchange="areaManipulation()">
+								<option value="all">All</option>
+								<option value="Boston">Boston</option>
+								<option value="Cambridge">Cambridge</option>
+								<option value="Somerville">Somerville</option>
+							</select>
+						</div>
+					</div>
+					<div class="user-control">
+						<div class="form-group">
+							<select id="order-category" class="form-control" onchange="orderManipulation()">
+								<option value="all">All</option>
+								<option value="web">Web</option>
+								<option value="phone">Phone</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				 <div class="col">
+					 <div id="pizza-table">
+						 <table class="table table-hover table-bordered">
+							 <thead>
+							 <tr>
+								 <th scope="col">Summary</th>
+								 <th scope="col">Value</th>
+							 </tr>
+							 </thead>
+							 <tbody id="pizza-table-body">
+							 	<tr>
+									<td>Total Deliveries</td>
+									<td id="tb-total-deliveries"></td>
+								</tr>
+							 	<tr>
+									<td>Total Pizzas</td>
+									<td id="tb-total-pizzas"></td>
+								</tr>
+							 	<tr>
+									<td>Average Time</td>
+									<td id="tb-avg-time"></td>
+								</tr>
+							 	<tr>
+									<td>Total Sales</td>
+									<td id="tb-total-sales"></td>
+								</tr>
+							 </tbody>
+						 </table>
+					 </div>
+					 <br>
+					 <div id="feedback-table">
+						 <table class="table table-hover table-bordered">
+							 <thead>
+							 <tr>
+								 <th scope="col">Summary</th>
+								 <th scope="col">Value</th>
+							 </tr>
+							 </thead>
+							 <tbody id="feedback-table-body">
+								 <tr>
+									 <td>Total Feedback</td>
+									 <td id="tb-total-feedback"></td>
+								 </tr>
+								 <tr>
+									 <td>High Feedback</td>
+									 <td id="tb-high-feedback"></td>
+								 </tr>
+								 <tr>
+									 <td>Medium Feedback</td>
+									 <td id="tb-med-feedback"></td>
+								 </tr>
+								 <tr>
+									 <td>Low Feedback</td>
+									 <td id="tb-low-feedback"></td>
+								 </tr>
+							 </tbody>
+						 </table>
+					 </div>
+				 </div>
+				<br>
+				<br>
+				<div class="col">
+					<div id="chart-area">
+						<div id="tooltip" class="hidden">
+							<p><strong>Deliveries</strong></p>
+							<p><span id="value"></span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<table id="products-table" class="table table-hover table-bordered sortable">
+					<thead>
+						<tr>
+							<th scope="col">Delivery ID</th>
+							<th scope="col">Area</th>
+							<th scope="col">Time (Min)</th>
+							<th scope="col">Driver</th>
+							<th scope="col">Total Pizzas</th>
+							<th scope="col">Punctuality</th>
+							<th scope="col">Quality</th>
+							<th scope="col">Wrong Pizza</th>
+						</tr>
+					</thead>
+					<tbody id="table-body">
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- embedding JS libraries -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+		<!-- d3 -->
+		<script src="https://d3js.org/d3.v6.min.js"></script>
+
+		<!-- data -->
+		<script src="data/delivery-data.js"></script>
+		<script src="data/feedback-data.js"></script>
+
+		<!-- bar chart -->
+		<script src="js/barchart.js"></script>
+
+		<!-- main js file -->
+		<script src="js/main.js"></script>
+
+		<!-- sortable js file -->
+		<script src="js/sortable.js"></script>
+	</body>
+</html>
