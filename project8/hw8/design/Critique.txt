@@ -1,0 +1,24 @@
+Rebecca Brand
+Design Critique
+Homework 8
+October 28th, 2020
+
+Having read the articles included for this homework assignment,
+I do have some skepticism about the linear gradient legend. However,
+because I used a linear scale between "white" and "DarkCyan", any sort
+of quantile legend or segmented legend would not represent the full scope of
+colors that might show up on my map or bar chart at any given time. Instead,
+the gradient shows the full breadth of available colors, and the current scope allows
+the viewer to associate "DarkCyan" with increasing values and "white" with decreasing values.
+
+"Maps are not objective, but a version of reality." - Great quote from the article!
+Given the author's argument, it is not as helpful to map absolute cases in the United States
+because of the immense population differences across states. However, having lived through
+this pandemic, we know how major American cities became hotspots with fewer resources, and it could be
+helpful to know the absolute number of cases and deaths in the context of the overall impact
+of COVID-19 on the United States.
+
+A couple possible solutions include:
+1. Using the smallest geographic unit possible, like counties;
+2. Using a sequential color scheme
+3. Keeping the absolute values for the bar and table, but removing from the map.

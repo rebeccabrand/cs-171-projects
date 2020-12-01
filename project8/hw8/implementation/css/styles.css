@@ -1,0 +1,26 @@
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 28px;
+    padding: 2px;
+    font: 6px sans-serif;
+    background: lightsteelblue;
+    border-radius: 8px;
+    /*  pointer-events: none;	This line needs to be removed */
+}
+
+h3 {
+    font-weight: bolder;
+    font: 16px sans-serif;
+    text-align: left;
+}
+
+h6 {
+    font: 10px sans-serif;
+    text-align: left;
+}
+
+.table {
+    font-size: 0.7em;
+}
