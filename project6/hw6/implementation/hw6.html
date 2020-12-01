@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - HW 5</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Bonus slider file -->
+	<link rel="stylesheet" href="css/nouislider.css">
+</head>
+<body>
+	<br>
+	<div class="container">
+		<div style="display: inline-block; vertical-align:middle;">
+			<img src="img/FIFA_LOGO_NEW.png">
+		</div>
+		<div style="display: inline-block; vertical-align:middle;">
+			<h1><b>FIFA World Cup</b><sup><b>TM</b></sup></h1>
+			<h4>All Time Statistics</h4>
+		</div>
+		<br>
+		<!-- Select box to choose the ranking type -->
+		<div class="container upper-body">
+			<div class="row click-margins">
+				<div class="col-sm">
+					<form class="form-inline">
+						<div class="form-group dropdown">
+							<label for="data-type" class="label"> Chart Data: </label>
+							<select class="form-control" id="data-type">
+								<option value="GOALS">Goals</option>
+								<option value="AVERAGE_GOALS">Average Goals</option>
+								<option value="MATCHES">Matches</option>
+								<option value="TEAMS">Teams</option>
+								<option value="AVERAGE_ATTENDANCE">Average Attendance</option>
+							</select>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm">
+					<label for="slider-range" class="label"> Time Period: </label>
+					<div id="slider-range" style="vertical-align:middle" onclick="updateVisualization()"></div>
+<!--					<form class="year-form">-->
+<!--						<div class="form-row align-items-center">-->
+<!--							<div class="col-auto">-->
+<!--								<label class="sr-only" for="start-year">Start Year:</label>-->
+<!--								<input type="text" class="form-control mb-2" id="start-year" placeholder="Start Year">-->
+<!--							</div>-->
+<!--							<div class="col-auto">-->
+<!--								<label class="sr-only" for="end-year">End Year:</label>-->
+<!--								<input type="text" class="form-control mb-2" id="end-year" placeholder="End Year">-->
+<!--							</div>-->
+<!--							<div class="col-auto">-->
+<!--								<button type="button" id="submit-button" class="btn btn-primary mb-2" onclick="updateVisualization()">Submit</button>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</form>-->
+				</div>
+			</div>
+		</div>
+		<!-- Parent container for the visualization -->
+		<div class="container main-body">
+			<div class="row">
+				<div class="col-sm">
+					<div id="chart-area"></div>
+				</div>
+				<div class="col-sm table-margins">
+					<div id="fifa-table">
+						<table class="table table-striped table-dark">
+							<thead id="tb-head">
+								<tr>
+									<th id="tb-edition"></th>
+									<th scope="col">Data</th>
+								</tr>
+							</thead>
+							<tbody id="tb-body">
+								<tr>
+									<td><b>Winner</b></td>
+									<td id="tb-winner"></td>
+								</tr>
+								<tr>
+									<td><b>Goals</b></td>
+									<td id="tb-goals"></td>
+								</tr>
+								<tr>
+									<td><b>Avg. Goals</b></td>
+									<td id="tb-avg-goals"></td>
+								</tr>
+								<tr>
+									<td><b>Matches</b></td>
+									<td id="tb-matches"></td>
+								</tr>
+								<tr>
+									<td><b>Teams</b></td>
+									<td id="tb-teams"></td>
+								</tr>
+								<tr>
+									<td><b>Avg. Attendance</b></td>
+									<td id="tb-avg-attendance"></td>
+								</tr>
+							</tbody>
+						</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3-tip.js"></script>
+
+	<!-- Bonus slider file -->
+	<script src="js/nouislider.js"></script>
+	<script src="js/wNumb.js"></script>
+
+	<!-- Your implementation -->
+	<script src="js/main.js"></script>
+</body>
+</html>

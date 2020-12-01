@@ -1,0 +1,106 @@
+
+/* ADD YOUR STYLES HERE */
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://bcfiresoccer.org/wp-content/uploads/2014/04/soccer-field-bg.jpg);
+}
+
+h1, h4 {
+  color: white;
+}
+
+h1 {
+  display: inline;
+}
+
+.main-body {
+  background: white;
+  opacity: 1;
+}
+
+.upper-body {
+  background: lightgrey;
+}
+
+.table-margins {
+  margin-top: 80px;
+  padding-right: 20px;
+}
+
+.click-margins {
+  padding: 20px;
+}
+
+.label {
+  font-weight: bold;
+  padding: 5px;
+}
+
+h1 img {
+  float:left;
+  margin:0 5px 0 0;
+}
+
+/****************/
+/*  LINE CHART  */
+/****************/
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.axis text {
+  font-size: 11px;
+}
+
+.line {
+  fill: none;
+  stroke: #1C9A3D;
+  stroke-width: 1.5px;
+}
+
+.tooltip-circle {
+  fill: #96AB96;
+}
+
+
+/*********************/
+/*  TOOLTIP OVERLAY  */
+/*********************/
+
+.tooltip-title {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
