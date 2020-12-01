@@ -1,0 +1,45 @@
+
+/* ADD YOUR STYLES HERE */
+
+/*.column-style {*/
+/*    margin-top: 5vh;*/
+/*    border: thin solid grey;*/
+/*    border-radius: 5px;*/
+/*    background: rgba(221,221,221,0.45)*/
+/*}*/
+
+.hd-row-style {
+    height: 15vh;
+}
+
+.gp-row-style {
+    height: 70vh;
+}
+
+/*.br-row-style {*/
+/*    height: 40vh;*/
+/*}*/
+
+.gp-content {
+    height: 100%;
+    width: 100%;
+}
+
+/*.br-content {*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*}*/
+
+.header-text {
+    color: white;
+}
+
+.bar-axis path, .bar-axis line {
+    fill: none;
+    stroke: none;
+    shape-rendering: crispEdges;
+}
+
+.axis path, .axis line {
+    font-family: monospace;
+}
