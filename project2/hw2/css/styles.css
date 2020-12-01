@@ -1,0 +1,20 @@
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+img {
+    max-height: 90%;
+    max-width: 90%;
+}
+
+.constraints {
+    max-height: 500px;
+    max-width: 500px;
+    text-align: center;
+}
+
+
+$('.carousel').carousel({
+    interval: 2000
+})

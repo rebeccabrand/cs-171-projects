@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <!-- Bonus content: added Harvard favicon to the website tab -->
+    <meta charset="UTF-8">
+    <title>Harvard Fact Book</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><b>Harvard Fact Book</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link link" href="/basics.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link" href="https://www.harvard.edu/">University Site</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<body>
+    <!-- Bonus content: used Bootstrap theme here -->
+    <main role="main">
+        <section class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">What Do You Want to Know<br>Here and Now?</h1>
+                <br>
+                <p class="lead text-muted center">
+                    This website is dedicated to unique facts about the university's <a class="link" href="https://www.harvard.edu/about-harvard/harvard-glance/history ">history</a> and <a class="link" href="https://www.harvard.edu/on-campus/visit-harvard/resources">resources.</a>
+                    It was designed and implemented as part of an assignment for CS171: Visualization.
+                </p>
+            </div>
+        </section>
+    </main>
+    <br>
+    <!-- Bonus content: added custom HTML and CSS elements to the website -->
+    <div class="row container">
+        <div class="column">
+            <img src="Harvard_River.jpg" alt="Charles River" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Harvard_Sweaters.jpg" alt="Annenberg Hall" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="Harvard_Dining.jpg" alt="Mountains" style="width:100%">
+        </div>
+    </div>
+    <div class="center">
+
+    </div>
+    <div id="content">
+        <p><b>*A new tidbit of information will pop up here.*</b></p>
+    </div>
+    <br>
+    <div class="center">
+        <button id="cs171-basics" class="btn btn-danger">List A New Crimson Fact</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <script src="js/dom-example.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
